@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.dgq</groupId>
+        <artifactId>xiaoha-seckill</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>xiaoha-seckill-order</artifactId>
+    <packaging>jar</packaging>
+
+    <name>xiaoha-seckill-order</name>
+    <description>dingdan模块，放置秒杀下单、订单列表、dingdan详情、取消订单、模拟支付等接口</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dgq</groupId>
+            <artifactId>xiaoha-seckill-common</artifactId>
+        </dependency>
+    </dependencies>
+</project>

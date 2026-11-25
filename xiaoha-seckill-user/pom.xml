@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.dgq</groupId>
+        <artifactId>xiaoha-seckill</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <packaging>jar</packaging>
+
+    <artifactId>xiaoha-seckill-user</artifactId>
+    <name>xiaoha-seckill-user</name>
+    <description>用户模块，放置用户登录、注册、发送验证码等接口</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dgq</groupId>
+            <artifactId>xiaoha-seckill-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-crypto</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>cloud.tianai.captcha</groupId>
+            <artifactId>tianai-captcha-springboot-starter</artifactId>
+        </dependency>
+    </dependencies>
+</project>
