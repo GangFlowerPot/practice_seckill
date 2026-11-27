@@ -139,4 +139,11 @@
     from t_user
     where mobile = #{mobile,jdbcType=VARCHAR}
   </select>
+    <select id="selectByNicknamePrefix" resultType="com.dgq.seckill.common.domain.dataobject.UserDO">
+      select
+          <include refid="Base_Column_List" />
+      from t_user
+      where nickname like concat(#{prefix}, '%')
+      and status = 1
+    </select>
 </mapper>

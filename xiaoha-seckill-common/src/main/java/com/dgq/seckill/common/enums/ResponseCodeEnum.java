@@ -8,6 +8,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ResponseCodeEnum implements BaseExceptionInterface {
 
+    // ----------- 用户模块异常状态码 -----------
     SYSTEM_ERROR("10000", "出错啦，后台小哥正在努力修复中……"),
     PARAM_NOT_VALID("10001", "参数错误"),
     USER_MOBILE_EXISTS("20001", "该手机号已注册"),
@@ -22,8 +23,14 @@ public enum ResponseCodeEnum implements BaseExceptionInterface {
     UNAUTHORIZED("20010", "未登录，请先登录"),
     USER_LOGIN_CREDENTIAL_ERROR("20011", "手机号或密码错误"),
     CAPTCHA_VERIFICATION_FAILED("20012", "行为验证码校验失败，请重新验证"),
-    SECKILL_SOLD_OUT("30001", "商品已售罄"),
-    SECKILL_DUPLICATE("30002", "您已参与过此秒杀活动");
+    // ----------- 秒杀商品模块异常状态码 -----------
+    SECKILL_ACTIVITY_NOT_EXIST("30001", "秒杀活动不存在"),
+    SECKILL_GOODS_NOT_EXIST("30002", "秒杀商品不存在"),
+    // ----------- 秒杀dingdan模块异常状态码 -----------
+    SECKILL_ACTIVITY_NOT_STARTED("40001", "秒杀活动未开始"),
+    SECKILL_ACTIVITY_ENDED("40002", "秒杀活动已结束"),
+    SECKILL_GOODS_SOLD_OUT("40003", "商品已售罄"),
+    SECKILL_ORDER_DUPLICATE("40004", "您已参与过此商品的秒杀");
 
     private String errorCode;
 

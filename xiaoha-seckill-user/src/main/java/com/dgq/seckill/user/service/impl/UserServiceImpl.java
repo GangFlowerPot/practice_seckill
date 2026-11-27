@@ -194,14 +194,14 @@ public class UserServiceImpl implements UserService {
             throw new BizException(ResponseCodeEnum.CAPTCHA_VERIFICATION_FAILED);
         }
 
-        // 判断 ImageCaptchaApplication 是否支持二次校验
-        boolean verified = false;
-        if (imageCaptchaApplication instanceof SecondaryVerificationApplication) {
-            verified = ((SecondaryVerificationApplication) imageCaptchaApplication).secondaryVerification(captchaId);
-        }
-        if (!verified) {
-            throw new BizException(ResponseCodeEnum.CAPTCHA_VERIFICATION_FAILED);
-        }
+        // 判断 ImageCaptchaApplication 是否支持二次校验 TODO 行为验证码需要配合前端使用，仅生成无法验证
+//        boolean verified = false;
+//        if (imageCaptchaApplication instanceof SecondaryVerificationApplication) {
+//            verified = ((SecondaryVerificationApplication) imageCaptchaApplication).secondaryVerification(captchaId);
+//        }
+//        if (!verified) {
+//            throw new BizException(ResponseCodeEnum.CAPTCHA_VERIFICATION_FAILED);
+//        }
 
         // 判断验证码类型是否合法
         VerifyCodeTypeEnum verifyCodeType = VerifyCodeTypeEnum.valueOf(type);

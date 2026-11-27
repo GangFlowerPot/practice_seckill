@@ -1,6 +1,9 @@
 package com.dgq.seckill.common.domain.mapper;
 
 import com.dgq.seckill.common.domain.dataobject.UserDO;
+import io.lettuce.core.dynamic.annotation.Param;
+
+import java.util.List;
 
 public interface UserDOMapper {
     int deleteByPrimaryKey(Long id);
@@ -18,4 +21,6 @@ public interface UserDOMapper {
     Long selectIdByMobile(String mobile);
 
     UserDO selectByMobile(String mobile);
+
+    List<UserDO> selectByNicknamePrefix(@Param("prefix") String prefix);
 }
