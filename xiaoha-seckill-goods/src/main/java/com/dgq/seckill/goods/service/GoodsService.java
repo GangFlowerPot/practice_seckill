@@ -18,4 +18,11 @@ public interface GoodsService {
      * 查询秒杀商品详情
      */
     Response<FindSeckillGoodsDetailRspVO> findSeckillGoodsDetail(FindSeckillGoodsDetailReqVO reqVO);
+
+    /**
+     * 预热指定活动的商品缓存
+     * @param activityId
+     * @return
+     */
+    Response<?> preheatActivityGoods(Long activityId);
 }
